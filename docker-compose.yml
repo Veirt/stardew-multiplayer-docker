@@ -1,4 +1,4 @@
-version: '2.2'
+version: "2.2"
 
 services:
   valley:
@@ -33,7 +33,7 @@ services:
       - ALWAYS_ON_SERVER_ICE_FISHING_COUNT_DOWN=${ALWAYS_ON_SERVER_ICE_FISHING_COUNT_DOWN-600}
 
       - ALWAYS_ON_SERVER_END_OF_DAY_TIMEOUT=${ALWAYS_ON_SERVER_END_OF_DAY_TIMEOUT-300}
-      - ALWAYS_ON_SERVER_FAIR_TIMEOUT=${ALWAYS_ON_SERVER_FAIR_TIMEOUT-1200}
+      - ALWAYS_ON_SERVER_FAIR_TIMEOUT=${ALWAYS_ON_SERVER_FAIR_TIMEOUT-12000}
       - ALWAYS_ON_SERVER_SPIRITS_EVE_TIMEOUT=${ALWAYS_ON_SERVER_SPIRITS_EVE_TIMEOUT-900}
       - ALWAYS_ON_SERVER_WINTER_STAR_TIMEOUT=${ALWAYS_ON_SERVER_WINTER_STAR_TIMEOUT-900}
 
@@ -121,12 +121,10 @@ services:
       - 5902:5900
       # NOVNC WEB
       - 5801:5800
-      # Game  
+      # Game
       - 24642:24642/udp
     volumes:
       # Saves go here now
       - ./valley_saves:/config/xdg/config/StardewValley/Saves
       # If you'd like to set an existing savegame before the first start otherwise this file will be edited when starting the first game
       - ./configs/autoload.json:/data/Stardew/game/Mods/AutoLoadGame/config.json
-
-      
