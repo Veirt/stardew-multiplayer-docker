@@ -116,6 +116,8 @@ services:
       # Non-destructive NPCs mod
       - ENABLE_NONDESTRUCTIVENPCS_MOD=${ENABLE_NONDESTRUCTIVENPCS_MOD-false}
 
+      # NPCMapLocations
+      - ENABLE_NPCMAPLOCATIONS_MOD=${ENABLE_NPCMAPLOCATIONS_MOD-true}
     ports:
       # VNC
       - 5902:5900
