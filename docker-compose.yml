@@ -118,6 +118,9 @@ services:
 
       # NPCMapLocations
       - ENABLE_NPCMAPLOCATIONS_MOD=${ENABLE_NPCMAPLOCATIONS_MOD-true}
+
+      # NetworkOptimizer
+      - ENABLE_NETWORKOPTIMIZER_MOD=${ENABLE_NETWORKOPTIMIZER_MOD-true}
     ports:
       # VNC
       - 5902:5900
@@ -130,3 +133,4 @@ services:
       - ./valley_saves:/config/xdg/config/StardewValley/Saves
       # If you'd like to set an existing savegame before the first start otherwise this file will be edited when starting the first game
       - ./configs/autoload.json:/data/Stardew/game/Mods/AutoLoadGame/config.json
+      - ./configs/networkoptimizer.json:/data/Stardew/game/Mods/NetworkOptimizer/config.json
