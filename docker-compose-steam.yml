@@ -1,5 +1,3 @@
-version: '2.2'
-
 services:
   valley:
     build:
@@ -127,12 +125,15 @@ services:
       # Non-destructive NPCs mod
       - ENABLE_NONDESTRUCTIVENPCS_MOD=${ENABLE_NONDESTRUCTIVENPCS_MOD-false}
 
+      # NPCMapLocations
+      - ENABLE_NPCMAPLOCATIONS_MOD=${ENABLE_NPCMAPLOCATIONS_MOD-true}
+
     ports:
       # VNC
       - 5902:5900
       # NOVNC WEB
       - 5801:5800
-      # Game  
+      # Game
       - 24642:24642/udp
     volumes:
       # Saves go here now
@@ -144,4 +145,4 @@ services:
     #   ## If you don't plan to play using VNC, 1 core should be enough to host for others
     #   resources:
     #     limits:
-    #       cpus: "1" 
+    #       cpus: "1"
